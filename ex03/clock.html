@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script>
+        
+        function getTime(){
+            let timer = new Date();
+            //new 사용 가능
+            
+            let hour = timer.getHours();
+            let min = timer.getMinutes();
+            let sec = timer.getSeconds();
+            let now = hour + ':' + min + ':' + sec;
+            return now;
+        }
+
+        function readerTime(){
+            // 백틱을 사용하면 중간에 함수를 넣을 수 있다
+            clockEl.innerHTML = `<h1>${getTime()}</h1>`;
+        }
+
+        //컴파일없이 실행할떄 위에서부터 아래로 읽는다
+        //읽다가 document있네 
+        //여기 안에 함수 있네 -> 함수 읽음
+        //그래서 선언 위치는 위아래 상관없다
+        let clockEl = document.querySelector("#clock");
+        //setInterval(수행할 함수, 반복시간);1/1000초
+        //1초마다 실행된다 
+        //함수인데 괄호가 없다-> 함수를 실행되는게 아니고 걸어둔다
+        //그러면 바뀌는 값이 계속 담긴다
+        //1초마다 갱신할수있다
+        setInterval(readerTime, 1000);  
+    </script>
+    
+</body>
+</html>

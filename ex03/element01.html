@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-text{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>box1</div>
+    <div>box2</div>
+    <div class="red-text">box3</div>
+    <div class="red-text">box4</div>
+    <div id="box5">box5</div>
+    <div id="err">box5</div>
+    
+    <hr>
+    <button onclick="tagChange()">태그찾기</button>
+    <button onclick="classChange()">클래스찾기</button>
+    <button onclick="idChange()">아이디찾기</button>
+    <button onclick="err()">에러</button>
+
+    <script>
+        function err(){
+            let errE1 = document.querySelector("#err");
+                errE1.innerHTML="아이디 혹은 비번 잘못적음"
+            console.log(errE1);
+            
+        }
+        function tagChange(){
+            
+           let tagEl=document.querySelectorAll("div");
+        //    console.log(tagEl.length);
+        //    console.log(tagEl[4]);
+        //    console.log(tagEl[5]);
+
+        //여러게니까 배열로 받는다
+         //요소 찾고 요소내용에 html적용가능 
+            tagEl[0].innerHTML="<h1>내용변경<h1>";
+                
+            tagEl[1].textContent="<h1>내용변경<h1>";
+            tagEl[2].textContent="내용변경";
+            tagEl[3].textContent="내용변경";
+            tagEl[4].textContent="내용변경";
+           //특정 배열을 바꿀 수 있다
+        }
+        function classChange(){
+            let tagE2 = document.querySelectorAll(".red-text");
+           //여러개니까 배열로 받는다
+            tagE2[0].textContent="내용변경";
+            tagE2[1].textContent="내용변경";
+            
+
+        }
+        function idChange(){
+            let e1 = document.querySelector("#box5");
+            e1.textContent="내용변경";
+
+            //아이디를찾으면 오브젝트
+        }
+    </script>
+</body>
+</html>

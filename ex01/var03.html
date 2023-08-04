@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4];
+        console.log(arr);
+        console.log(arr[0]);//배열 찾기
+        
+        //전개연산자
+        //1,2,3,4
+        let arr2 =[100,...arr,9];//앞뒤로 추가
+        arr2[2]=500;//중간값 바꾸기
+        //흩뿌리고 다시 감싼다 
+        //배열에서 앞뒤로추가 가능하다
+        console.log(arr2);
+    </script>
+</body>
+</html>

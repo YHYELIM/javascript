@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<button on>클릭</button>
+<button onclick="alert('Hello World!')">Click me</button>
+<button id="myBtn">Click me</button>
+<input type="text" id="t1"><br/>
+<script>
+    
+const myBtn = document.querySelector("#myBtn");
+myBtn.addEventListener("click", ()=> {
+    //이벤트 리스너에 걸때는 on을 빼도 된다
+    //버튼은 이벤트 달고
+    //버튼이 아닌것들은 id걸어서 제어
+    // let t1 = document.querySelector("#t1");
+    // t1.addEventListener("keydown");
+alert("Hello World!");
+});
+</script>
+</body>
+</html>

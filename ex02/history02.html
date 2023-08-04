@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>history02</h1>
+    <button onclick="back()">뒤로가기</button>
+    <script>
+        function back(){
+            // location.href="/ex02/history01.html";
+            //윈도우 생략가능
+            //이렇게 되면 뒤로가기 했을때 값이 없어져있다
+            history.back();
+            //이게 진정한 뒤로 가기
+            //회원가입 하고있는데 뒤로 가기 했다가 다시 돌아오면 값을 들고있음
+            
+
+        }
+    </script>
+</body>
+</html>
